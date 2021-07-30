@@ -21,6 +21,8 @@ cmake_minimum_required(VERSION 3.9)
 
 include(GNUInstallDirs)
 
+set (HSMEME_WWW_DIR "${CMAKE_INSTALL_LOCALSTATEDIR}/www/hsmeme.net/")
+
 
 set (hsmeme_sources
     index.php
@@ -44,16 +46,16 @@ set (hsmeme_fontawesome
 )
 
 install(FILES ${hsmeme_sources}
-    DESTINATION ${CMAKE_INSTALL_LOCALSTATEDIR}/hsmeme.net/
+    DESTINATION ${HSMEME_WWW_DIR}
 )
 install(FILES ${hsmeme_css}
-    DESTINATION ${CMAKE_INSTALL_LOCALSTATEDIR}/hsmeme.net/
+    DESTINATION ${HSMEME_WWW_DIR}
 )
 
 install(DIRECTORY ${hsmeme_bootstrap}
-    DESTINATION ${CMAKE_INSTALL_LOCALSTATEDIR}/hsmeme.net/bootstrap
+    DESTINATION ${HSMEME_WWW_DIR}/bootstrap
 )
 
 install(DIRECTORY ${hsmeme_fontawesome}
-    DESTINATION ${CMAKE_INSTALL_LOCALSTATEDIR}/hsmeme.net/fontawesome
+    DESTINATION ${HSMEME_WWW_DIR}/fontawesome
 )
