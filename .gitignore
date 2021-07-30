@@ -1,0 +1,5 @@
+# Visual Studio Code Directory
+.vscode/*
+
+# Config PHP file
+config.php
