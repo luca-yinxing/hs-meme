@@ -49,7 +49,7 @@ install(FILES ${hsmeme_sources}
     DESTINATION ${HSMEME_WWW_DIR}
 )
 install(FILES ${hsmeme_css}
-    DESTINATION ${HSMEME_WWW_DIR}
+    DESTINATION ${HSMEME_WWW_DIR}/css
 )
 
 install(DIRECTORY ${hsmeme_bootstrap}
