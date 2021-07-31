@@ -76,7 +76,7 @@ if (isset($_GET["query"])  && !empty($_GET["query"])) {
 					if (isset($_GET["query"]) && !empty($_GET["query"])) {
 						$cardarray = search_card_array($GLOBALS["carddb"], $_GET["query"]);
 						// TODO: Code replication in language list
-						$url = get_current_url();
+						$url = $_SERVER["REQUEST_URI"];
 						$key = "i";
 						$url = preg_replace('~(\?|&)' . $key . '=[^&]*~', '', $url);
 						$url .= (parse_url($url, PHP_URL_QUERY) ? '&' : '?');
